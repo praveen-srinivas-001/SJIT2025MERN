@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled WebPage</title>
+    <!-- It is not necessary to write the styles inside the head -->
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .internal {
+        margin: 0;
+        background-color: rgb(75, 7, 111);
+        height: 200px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- you have to write doc first and then styling. -->
+    <h4>Inline Styling</h4>
+    <p style="color: rgb(181, 145, 0); background-color: rgb(137, 43, 226)">
+      This paragraph present in the paragraph tag under inline css
+    </p>
+    <h4>Internal and External Styling</h4>
+    <!-- default image size 312x312 or 400x400 -->
+    <div class="internal external" style="height: 100px">
+      <!--internal css will overwrite the existing styles-->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci
+        magni ipsam, officia fugiat quo eaque quidem! Aut, numquam dolorem.br
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab
+        deserunt labore aperiam tempore provident libero, ducimus magnam harum
+        vero, aut iusto reiciendis repellat, asperiores maxime rerum distinctio
+        voluptas quod!
+      </p>
+    </div>
+    <ol id="id">
+        <li>inline</li>
+        <li>internal</li>
+        <li>external</li>
+    </ol>
+  </body>
+</html>

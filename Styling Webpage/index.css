@@ -1,0 +1,15 @@
+.external{
+    height: 300px;
+    width: 300px;
+    background-color: rgba(137, 43, 226, 0.463);
+}
+*{
+    background-color:rgb(230, 0, 255);
+}
+ol{
+    margin-top: 75px;
+    list-style-type:lower-greek;
+}
+#id{
+    color: rgb(255, 255, 255);
+}
