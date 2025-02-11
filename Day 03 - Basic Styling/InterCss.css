@@ -1,7 +1,7 @@
 .box-model {
   background-color: grey;
-  margin: 10px;
   border: solid 5px red;
+  /* margin: 10px; this values are top -> right -> bottom -> left */
   padding: 20px;
 }
 
