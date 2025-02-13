@@ -1,6 +1,9 @@
 li{
-    display: inline;
+    display: inline-block;
 }
-ol{
-    list-style-type: decimal;
+
+li::before {
+    content: '\2022'; /* Unicode for bullet */
+    display: inline-block;
+    margin-right: 8px; /* Adjust spacing as needed */
 }

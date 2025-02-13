@@ -1,0 +1,36 @@
+.logo{
+    margin: 5px;
+    border-radius: 50px;
+    width: 100px;
+    
+}
+
+nav{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: blanchedalmond; */
+    padding: 10px;
+}
+
+.link{
+    border-radius: 15px;  
+    text-decoration: none;
+    color:blanchedalmond;
+}
+.link:hover{
+    background-color: whitesmoke;
+    color: rgb(255, 64, 0);
+    padding: 5px;
+}
+.dropdown{
+    list-style: none;
+    display: none;
+}
+.dropdown:hover{
+    display: block;
+}
+
+body{
+    color: rgb(119, 138, 64);
+}
