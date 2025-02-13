@@ -1,0 +1,57 @@
+h2{
+    color: darkblue;
+    background-color: lightblue;
+    height: 25px;
+    width: 100px;
+    padding: 40px;
+    border-radius: 0px 50px 50px 50px;
+}
+.transition{
+    color: darkblue;
+    background-color: lightblue;
+    height: 100px;
+    width: 200px;
+    padding: 40px;
+    border-radius: 30px;
+    transition: height 3s, width 2s, transform 2s, background-color 3s, color 3s;
+}
+
+.transition:hover{
+    color: darkslategrey;
+    background-color: lightslategrey;
+    height: 300px;
+    width: 300px;
+}
+
+
+@keyframes animationDiv {
+    from{
+        background-color: orange;
+    }to{
+        color: darkslategrey;
+        background-color: lightslategrey;
+    }
+}
+
+@keyframes animationDiv {
+    0%{
+        border-radius: 0 0 0 0;
+    }
+    25%{
+        border-radius: 0px 50px 0px 0px;
+    }
+    50%{
+        border-radius: 0px 50px 50px 0px;
+    }
+    75%{
+        border-radius: 0px 50px 50px 50px;
+    }
+    100%{
+        width: 300px;
+    }
+}
+.animation{
+    animation-name: animationDiv;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+}
