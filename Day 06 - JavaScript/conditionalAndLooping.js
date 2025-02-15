@@ -38,4 +38,6 @@ Object.keys(Object1).forEach((ele) => {
     console.log(ele);
 });
 
-Object.entries 
+Object.entries(Object1).forEach((ele) =>{
+    console.log(ele);
+});
