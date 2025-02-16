@@ -3,7 +3,7 @@
 1 if
 2. If Else
 3. If ElseIf Else
-4. 
+4. ternary
 5. Switch
 */ 
 
