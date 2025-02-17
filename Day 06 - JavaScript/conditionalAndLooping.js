@@ -30,8 +30,8 @@ Object1 = { // Way 1
     "training" : "MERN Stack",
     "companyName" : "RAMPeX"
 }
-for({key, value} of Object.entries(Object1)){
-    console.log(key, value);
+for({key, val} of Object.entries(Object1)){
+    console.log(key, val);
 }
 
 Object.keys(Object1).forEach((ele) => {
@@ -41,3 +41,7 @@ Object.keys(Object1).forEach((ele) => {
 Object.entries(Object1).forEach((ele) =>{
     console.log(ele);
 });
+
+for(var {key,val} of Object.entries(Object1)){
+    console.log(key,val);
+}
