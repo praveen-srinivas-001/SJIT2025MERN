@@ -85,6 +85,6 @@ async function postCode(){
     const [pos, like, comment, share] = await Promise.all([post, likeCode(), commentCode(), shareCode()]);
     console.log(pos);
     console.log(like);
-    console.log(comment);xddd+
+    console.log(comment);
     console.log(share);
 }postCode()

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const UseEffect = () => {
   const [text, setText] = useState("Hi");
-//   const [text1, setText1] = useState("Hello");
+  const [text1, setText1] = useState("Hello");
 
   useEffect(() => {
     console.log(text);
