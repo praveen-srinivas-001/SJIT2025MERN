@@ -6,3 +6,18 @@ nav{
     padding: 10px;
 }
 
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-list{
+    display: none
+}
+
+/* .dropdown-link{
+
+} */
