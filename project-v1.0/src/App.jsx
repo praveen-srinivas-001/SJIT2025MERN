@@ -1,4 +1,3 @@
-// import './App.css'
 import Home from "./components/FunctionalComponent/Home.jsx";
 import About from "./components/FunctionalComponent/About.jsx";
 import Contact from "./components/FunctionalComponent/Contact.jsx";
@@ -10,7 +9,11 @@ import UseState from "./components/FunctionalComponent/Hooks/UseState.jsx";
 import UseEffectAPI from "./components/FunctionalComponent/Hooks/UseEffectAPI.jsx";
 import UseRef from "./components/FunctionalComponent/Hooks/UseRef.jsx";
 import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo.jsx";
+import UseMemoize from "./components/FunctionalComponent/Hooks/UseMemoize.jsx";
+// import Memo from "./components/FunctionalComponent/Hooks/Memoization/Memo.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Memo from "./components/FunctionalComponent/Hooks/Memoization/memo.jsx";
+
 
 function App() {
   return (
@@ -23,11 +26,15 @@ function App() {
             <Route path="/" element={<Home sjit="st.joseph" />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+
             <Route path="/use-effect" element={<UseEffect />} />
             <Route path="/use-state" element={<UseState />} />
             <Route path="/use-effect-api" element={<UseEffectAPI />} />
             <Route path="/use-ref" element={<UseRef />} />
             <Route path="/use-memo" element={<UseMemo />} />
+            <Route path="/use-memoize" element={<UseMemoize />} />
+            <Route path="/memo" element={<Memo /> }/> 
+            
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>

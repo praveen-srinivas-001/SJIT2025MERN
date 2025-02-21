@@ -30,3 +30,7 @@ const UseMemo = () => {
 };
 
 export default UseMemo;
+
+// it is utilized to store value in chache memory 
+// it is used to optimize your website 
+// var value = useMemo (function, dependency);
