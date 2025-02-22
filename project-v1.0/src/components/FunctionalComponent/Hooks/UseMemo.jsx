@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 function slowFunction(num) {
-    for(let time=1; time < 50000; time++){
+    for(let time=1; time < 5000000; time++);
         return num*2;
-    }
+
 }
 const UseMemo = () => {
   var [number, setNumber] = useState(0);

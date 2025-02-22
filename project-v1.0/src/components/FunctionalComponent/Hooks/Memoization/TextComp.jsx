@@ -1,4 +1,4 @@
-import Memo, {useState} from 'react';
+import {useState} from 'react';
 
 const TextComp = () => {
     var [text, setText] = useState("");
@@ -6,8 +6,8 @@ const TextComp = () => {
         <div>
             <h1>This is a number Component{text}</h1>
             <input type="text" value={text} onChange={(e) => setText(e.target.value)}/>
-            <h2>The number is {text}</h2>
+            <h2>The text is {text}</h2>
         </div>
     );
 }
-export default Memo(TextComp);
+export default TextComp;

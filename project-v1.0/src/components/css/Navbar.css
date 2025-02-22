@@ -5,6 +5,20 @@ nav{
     justify-content: space-around;
     padding: 10px;
 }
+li{
+    padding: 10px 20px;
+}
+.link {
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+}
+
+.link:hover {
+    background-color: white;
+    color: chocolate;
+}
 
 .dropdown{
     position: relative;
@@ -15,9 +29,20 @@ nav{
 }
 
 .dropdown-list{
-    display: none
+    list-style-type: none;
+    margin: 0px;
+    position: absolute;
+    background-color: chocolate;
+    border-radius: 10px;
+    padding: 10px;
+}
+.dropdown-link{
+    padding: 5px 10px;
+    text-align: center; 
+    border-radius: 5px;
 }
 
-/* .dropdown-link{
-
-} */
+.dropdown-link:hover{
+    background-color: white;
+    color: chocolate;
+}

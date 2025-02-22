@@ -8,6 +8,6 @@ const Memo = () => {
       <NumComp />
       <TextComp />
     </div>
-  );F
+  );
 };
 export default Memo;

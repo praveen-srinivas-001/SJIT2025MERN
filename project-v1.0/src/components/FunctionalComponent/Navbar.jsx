@@ -1,49 +1,68 @@
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
+import { useState } from "react";
+
 const Navbar = () => {
+  var [dropdown, showDropdown] = useState(false);
+  // var [dropdown1, showDropdown1] = useState(false);
+
   return (
     <header>
       <nav>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/gallery">Gallery</Link>
-        </li>
+        <Link to="/" className="link">
+          <li>Home</li>
+        </Link>
 
-        <div>
-          <li>Hooks</li>
-          <ol>
-            <li>
-              <Link to="/use-effect">UseEffect</Link>
-            </li>
-            <li>
-              <Link to="/use-state">UseState</Link>
-            </li>
-            <li>
-              <Link to="/use-effect-api">UseEffectAPI</Link>
-            </li>
-            <li>
-              <Link to="/use-ref">UseRef</Link>
-            </li>
-            <li>
-              <Link to="/use-memo">UseMemo</Link>
-            </li>
-            <li>
-              <Link to="/use-memoize">UseMemoize</Link>
-            </li>
-          </ol>
+        <Link to="/about" className="link">
+          <li>About</li>
+        </Link>
+
+        <Link to="/gallery" className="link">
+          <li>Gallery</li>
+        </Link>
+
+        <div
+          onMouseEnter={() => showDropdown(!dropdown)}
+          onMouseLeave={() => showDropdown(!dropdown)}
+        >
+          <li className="link">Hooks</li>
+          {dropdown && (
+            <ol className="dropdown-list">
+              <Link to="/use-state" className="link">
+                <li className="dropdown-link">UseState </li>
+              </Link>
+              <Link to="/use-effect" className="link">
+                <li className="dropdown-link">UseEffect</li>
+              </Link>
+              <Link to="/use-effect-api" className="link">
+                <li className="dropdown-link">UseEffectAPI</li>
+              </Link>
+              <Link to="/use-ref" className="link">
+                <li className="dropdown-link">UseRef</li>
+              </Link>
+              <Link to="/use-callback" className="link">
+                <li className="dropdown-link">UseCallback</li>
+              </Link>
+              <Link to="/use-memo" className="link">
+                <li className="dropdown-link">UseMemo</li>
+              </Link>
+              <Link to="/use-memoize" className="link">
+                <li className="dropdown-link">UseMemoize</li>
+              </Link>
+              <Link to="/memo" className="link">
+                <li className="dropdown-link">Custom Hook</li>
+              </Link>
+            </ol>
+          )}
         </div>
 
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link to="/signup">Signup</Link>
-        </li>
+        <Link to="/contact" className="link">
+          <li>Contact</li>
+        </Link>
+
+        <Link to="/signup" className="link">
+          <li>Signup</li>
+        </Link>
       </nav>
     </header>
   );
