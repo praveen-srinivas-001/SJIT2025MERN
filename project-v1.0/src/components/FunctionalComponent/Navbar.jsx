@@ -56,6 +56,10 @@ const Navbar = () => {
           )}
         </div>
 
+        <Link to="/studentresult" className="link">
+          <li>Student Result</li>
+        </Link>
+
         <Link to="/contact" className="link">
           <li>Contact</li>
         </Link>
@@ -63,9 +67,11 @@ const Navbar = () => {
         <Link to="/signup" className="link">
           <li>Signup</li>
         </Link>
-      </nav>
+      </nav>import PropTypes from 'prop-types';
+
     </header>
   );
 };
 
 export default Navbar;
+ddd
