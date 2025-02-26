@@ -67,11 +67,9 @@ const Navbar = () => {
         <Link to="/signup" className="link">
           <li>Signup</li>
         </Link>
-      </nav>import PropTypes from 'prop-types';
-
+      </nav>
     </header>
   );
 };
 
 export default Navbar;
-ddd

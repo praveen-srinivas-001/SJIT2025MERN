@@ -1,17 +1,54 @@
-import Home from "./Home";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Signup = () => {
+  const navigate = useNavigate();
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [phone, setPhone] = useState(0);
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      console.log("entered handlesubmit");
+      const req = await axios.post("http://localhost:3001/signup", {
+        first_name: first,
+        last_name: last,
+        email: email,
+        password: pass,
+        phone_no: phone,
+      });
+      console.log(req.data);
+      const msg = req.data.message;
+      const isSignedup = req.data.isSignUp;
+      if (isSignedup) {
+        alert(msg);
+        navigate("/login");
+      } else {
+        alert(msg);
+      }
+    } catch {
+      alert("login unsuccessful");
+    }
+  };
   return (
     <center>
       <h3>SignUp</h3>
-      <form action={Home}>
+      <form onSubmit={handleSubmit}>
         <table>
           <tr>
             <th>
               <label for="FirstName">First Name:</label>
             </th>
             <td>
-              <input type="text" placeholder="Enter Your First Name" required />
+              <input
+                type="text"
+                placeholder="Enter Your First Name"
+                value={first}
+                onChange={(e) => setFirst(e.target.value)}
+              />
             </td>
           </tr>
           <tr>
@@ -19,7 +56,12 @@ const Signup = () => {
               <label for="LastName">Last Name:</label>
             </th>
             <td>
-              <input type="text" placeholder="Enter Your First Name" />
+              <input
+                type="text"
+                placeholder="Enter Your First Name"
+                value={last}
+                onChange={(e) => setLast(e.target.value)}
+              />
             </td>
           </tr>
           <tr>
@@ -30,7 +72,8 @@ const Signup = () => {
               <input
                 type="email"
                 placeholder="Enter Your E-mail:"
-                // value="@gmail.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </td>
           </tr>
@@ -39,7 +82,12 @@ const Signup = () => {
               <label for="password">Password:</label>
             </th>
             <td>
-              <input type="password" placeholder="Enter Your E-mail:" />
+              <input
+                type="password"
+                placeholder="Enter Your E-mail:"
+                value={pass}
+                onChange={(e) => setPass(e.target.value)}
+              />
             </td>
           </tr>
           <tr>
@@ -63,7 +111,12 @@ const Signup = () => {
               <label for="Phone">Mobile Number</label>
             </th>
             <td>
-              <input type="text" placeholder="Enter your phone number" />
+              <input
+                type="Number"
+                placeholder="Enter your phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </td>
           </tr>
           <tr>
@@ -80,7 +133,7 @@ const Signup = () => {
             </td>
           </tr>
         </table>
-        <button>signup</button>
+        <button type="submit">signup</button>
 
         <p>
           Already have an account? <a href="login.html">login</a>

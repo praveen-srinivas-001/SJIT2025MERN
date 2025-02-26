@@ -12,20 +12,18 @@ import UseRef from "./components/FunctionalComponent/Hooks/UseRef.jsx";
 import UseCallback from "./components/FunctionalComponent/Hooks/UseCallback.jsx";
 import UseMemo from "./components/FunctionalComponent/Hooks/UseMemo.jsx";
 // custom Hooks
-import Hoc from './components/FunctionalComponent/HoC/Hoc.jsx'
+import Hoc from "./components/FunctionalComponent/HoC/Hoc.jsx";
 import UseMemoize from "./components/FunctionalComponent/Hooks/UseMemoize.jsx"; // custom Hook
 import Memo from "./components/FunctionalComponent/Hooks/Memoization/Memo.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
 
 function App() {
   return (
     <div>
       <main>
         <BrowserRouter>
-          <Navbar />{" "}
+          <Navbar />
           {/* navbar should be inside the browser router tag because as the navbar uses the Link from BrowserRouter*/}
           <Routes>
             <Route path="/" element={<Home sjit="st.joseph" />} />
@@ -39,9 +37,9 @@ function App() {
             <Route path="/use-callback" element={<UseCallback />} />
             <Route path="/use-memo" element={<UseMemo />} />
             <Route path="/use-memoize" element={<UseMemoize />} />
-            <Route path="/memo" element={<Memo /> }/> 
-            
-            <Route path="/hoc" element={<Hoc/>}/>
+            <Route path="/memo" element={<Memo />} />
+
+            <Route path="/hoc" element={<Hoc />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
